@@ -17,11 +17,11 @@ public class Armstrong {
      * otherwise
      */
     public boolean isArmstrong(int number) {
-        long sum = 0;
-        long number2 = number;
+        int sum = 0;
+        int number2 = number;
         while (number2 > 0) {
-            long mod = number2 % 10;
-            sum += Math.pow(mod, 3);
+            int mod = number2 % 10;
+            sum=sum*10+mod;
             number2 /= 10;
         }
         return sum == number;
